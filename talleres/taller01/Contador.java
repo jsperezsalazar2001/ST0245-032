@@ -1,8 +1,9 @@
 /**
  * La clase Contador tiene la intención de representar un contador.
  * 
- * @author Mauricio Toro, Andres Paez
- * @version 1
+ * @author (Juan Sebastián Pérez Salazar)
+ * @author (Yoan Alejandro Guzman)
+ * @version 17 de julio, 2018
  */
 
 public class Contador {
@@ -20,14 +21,17 @@ public class Contador {
     }
 
     /**
-     * El método incrementar incrementa el contador en una unidad.
+     * El método incrementar incrementa el contador en la cantidad que el usuario selecciona.
      *
-     *(opcional: se podria pasar un parametro "cantidad" para incrementar esa cantidad de unidades).
      */
     public void incrementar(int cantidad) {
         cuenta += cantidad; 
     }
 
+    /**
+     * El método decrementar decrementa el contador en la cantidad que el usuario selecciona.
+     *
+     */
     public void decrementar(int cantidad) {
         if(cuenta-cantidad>0) cuenta -= cantidad;
         else System.out.println("No se decrementó porque la cantidad supera la cuenta");
@@ -44,8 +48,7 @@ public class Contador {
     
     /**
     * toString se encargará de convertir el contador en un tipo cadena
-    * para su posterior visualización
-    * se debe de mostrar el estado del contador y su id
+    * para su posterior visualización.
     *
     * @return una cadena que contiene el id del contador y su cuenta
     */
