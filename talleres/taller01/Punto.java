@@ -2,7 +2,8 @@
 /**
  * Esta clase contiene los atributos de un punto y unos métodos respectivos.
  * 
- * @author (Juan Sebastián Pérez Salazar) 
+ * @author (Juan Sebastián Pérez Salazar)
+ * @author (Yoan Alejandro Guzman)
  * @version (17 de julio, 2018)
  */
 public class Punto
