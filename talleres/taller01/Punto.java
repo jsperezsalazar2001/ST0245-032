@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Punto here.
+ * Esta clase contiene los atributos de un punto y unos métodos respectivos.
  * 
  * @author (Juan Sebastián Pérez Salazar) 
- * @version (a version number or a date)
+ * @version (17 de julio, 2018)
  */
 public class Punto
 {
@@ -22,17 +22,14 @@ public class Punto
         return this.y; 
     }
 
-    // http://mathworld.wolfram.com/PolarCoordinates.html
     public double radioPolar() {
         return Math.sqrt(Math.pow(x,2)+Math.pow(y,2)); 
     }
 
-    // http://mathworld.wolfram.com/PolarCoordinates.html
     public double anguloPolar() {
         return Math.atan2(y,x);
     }
 
-    // http://mathworld.wolfram.com/Distance.html
     public double distanciaEuclidiana(Punto otro) {
         return Math.sqrt(Math.pow((x-otro.x()),2)+Math.pow((y-otro.y()),2));
     }
