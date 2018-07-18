@@ -2,7 +2,7 @@
  * La clase Contador tiene la intención de representar un contador.
  * 
  * @author (Juan Sebastián Pérez Salazar)
- * @author (Yoan Alejandro Guzman)
+ * @author (Yhoan Alejandro Guzman)
  * @version 17 de julio, 2018
  */
 
