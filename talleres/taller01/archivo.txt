@@ -1,1 +1,2 @@
-.
+En este taller se trabajan los datos abstractos y los tipos de datos para brindar mayor efectividad al programa y aumentar el ahorro de memoria.
+Integrantes: Juan Sebastián Pérez Salazar, Yoan Alejandro Guzman
