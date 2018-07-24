@@ -5,7 +5,7 @@
  * @author (Yhoan Alejandro Guzmán García) 
  * @version (Juan Sebastián Pérez Salazar)
  */
-public class combinaciones
+public class Combinaciones
 {
     /**
      * @param s es la cadena a la que se le hallarán las posibles combinaciones.
