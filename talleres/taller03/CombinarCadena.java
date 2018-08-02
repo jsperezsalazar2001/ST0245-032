@@ -1,31 +1,30 @@
-
 /**
  *
- * La clase CombinarCadena tiene como objetivo realizar un algoritmo que saca todas las combinaciones posiblesde una cadena.
+ * La clase CombinarCadena tiene como objetivo realizar un algoritmo que saca todas las combinaciones posibles de una cadena.
  *
- * @author Yhoan Alejandro Gúzman
+ * @author Yhoan Alejandro Guzmán
  * @version 1
  */
 public class CombinarCadena
 {
     /**
      *
-     * El método permutation es un auxiliar del proceso 
+     * El método combinarAux es un auxiliar del proceso 
      * @param str es la cadena a combinar
      */
-    public static void combinar(String str) { 
-        combinarAux(str, ""); 
+    public static void combinarAux(String str) { 
+        combinar(str, ""); 
     }
 
     /**
      *
-     * El método combinarAux es el core del proceso, en el se busca conseguir
+     * El método combinar es el core del proceso, en el se busca conseguir
      * las posibles combinaciones que puede tener la cadena str 
      * @param str es la cadena a combinar
      * @param prefix cadena auxiliar donde se guarda la cadena de salida
      *
      */
-    public static String combinarAux(String str, String prefix){
+    public static String combinar(String str, String prefix){
         String c="";
         if(prefix.length()==str.length()){
             System.out.println(prefix);
@@ -33,7 +32,7 @@ public class CombinarCadena
         }
         for(int i=0;i<str.length();i++){
             c=prefix+str.charAt(i);
-            c+=combinarAux(str,c);
+            c+=combinar(str,c);
         }
         return c;
     }
@@ -43,6 +42,6 @@ public class CombinarCadena
      * @param args 
      */
     public static void main(String[] args){
-        combinar("abc");
+        combinarAux("abc");
     }
 }
