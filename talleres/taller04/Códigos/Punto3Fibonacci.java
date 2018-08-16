@@ -9,8 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class Fibonacci2 {
 
     /**
-     * @param n es el n-ésimo termino de la sucesión
-     * de fibonacci, que se quiere calcular
+     * @param n es el n-ésimo termino que se quiere calcular de la sucesión de fibonacci.
      * Este método hace lo cálculos necesarios para obtener este n-ésimo término
      */
     public  int fibonacci(int n) {
@@ -20,7 +19,7 @@ public class Fibonacci2 {
             return 1;
         }
         try{
-            TimeUnit.SECONDS.sleep(1);
+            TimeUnit.SECONDS.sleep(1); //Para obtener el tiempo de ejecución
         }catch (Exception e){
             System.out.println("Error: "+e);
         }
