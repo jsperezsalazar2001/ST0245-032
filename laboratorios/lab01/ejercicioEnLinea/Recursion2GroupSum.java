@@ -6,7 +6,7 @@
 public class Recursion2GroupSum {
 
     /*
-    *Método que resuelve el siguiente enunciado de CodingBat - Recursion2:
+    * Method that solves the following statement of CodingBat - Recursion2:
     "Given an array of ints, is it possible to choose a group of some of the ints, 
     such that the group sums to the given target? This is a classic backtracking 
     recursion problem. Once you understand the recursive backtracking strategy in 
