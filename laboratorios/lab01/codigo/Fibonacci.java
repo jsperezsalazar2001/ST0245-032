@@ -1,16 +1,15 @@
 
 /**
- * Esta clase contiene el método encargado de retornar el valor enésimo de la serie Fibonacci y el método main
- * con el cual se ejecutan las pruebas con los valores 10, 20, 100 y 1000.
+ * This class contains the method responsible for returning the nth value of the Fibonacci series 
+ * and the main method with which the tests with values 10, 20, 100 and 1000 are executed.
  * @author Juan Sebastián Pérez Salazar
- * @author Yhoan Alejandro Gúzman 
  * @version 1
  */
 public class Fibonacci {
     /**
-     * Este método se encarga de retornar el valor n-simo de la serie de Fibonacci.
-     * @param n recibe el valor enésimo que se retornará.
-     * @return Un entero, el cual es el valor enésimo de la serie. 
+     * This method is responsible for returning the n-simo value of the Fibonacci series.
+     * @param n receives the nth value that will be returned.
+     * @return An integer, which is the nth value of the series. 
      */
     public static int serieFibonacci(int n){
         if(n==0) return 0;
@@ -19,7 +18,7 @@ public class Fibonacci {
     }
     
     /**
-     * Este método se encarga de hacer las pruebas del método anterior con los valores de 10, 20, 100 y 1000.
+     * This method is in charge of making the tests of the previous method with the values of 10, 20, 100 and 1000.
      * @param args 
      */
     public static void main(String[] args){
