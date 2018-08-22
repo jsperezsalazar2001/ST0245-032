@@ -1,5 +1,10 @@
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Esta calse se encarga de realizar el método suma los elementos de un arreglo mediante ciclos.
+ * @author Juan Sebastián Pérez Salazar
+ */
+
 public class Punto2SumaArreglo {
     public static void main(String[] args){
         for (int i = 10000000; i <= 200000000; i = i + 10000000){
