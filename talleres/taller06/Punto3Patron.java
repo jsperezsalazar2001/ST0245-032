@@ -9,18 +9,20 @@ public class Punto3Patron {
     
 	/**
 	 * Este método se encarga de generar el patron y almacenarlo en el ArrayList para que luego este sea imprimido. 
+	 * La complejidad de este algoritmo es O(n + n^2 + n^2 + n + n)
+	 * O(n^2)
 	 * @param n entero que indica hasta donde se realizará la serie 
 	 */
     public void patronArreglo(int n){
         
-        for(int i = 1; i<=n; i++){
-            for(int j = 1; j<=i; j++){
-                lista.add(j);
+        for(int i = 1; i<=n; i++){ // O(n)
+            for(int j = 1; j<=i; j++){ // O(n^2)
+                lista.add(j); // O(n^2)
             }
         }
         
-        for(int i=0; i<lista.size(); i++){
-            System.out.print(lista.get(i)+" ");
+        for(int i=0; i<lista.size(); i++){ // O(n)
+            System.out.print(lista.get(i)+" "); // O(n)
         }  
         System.out.println();
     }
