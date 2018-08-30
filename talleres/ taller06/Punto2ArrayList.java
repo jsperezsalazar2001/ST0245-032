@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 /**
  * Esta clase contiene un método que agrega elementos a un ArrayList hasta que el usuario ingrese -1.
- * @author Juan Sebastián Pérez Salazar 
+ * @author Juan Sebastián Pérez Salazar a
  */
 public class Punto2ArrayList {
     ArrayList<Integer> listaIndefinida = new ArrayList<>();
