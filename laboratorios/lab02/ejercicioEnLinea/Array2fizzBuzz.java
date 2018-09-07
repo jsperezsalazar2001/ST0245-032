@@ -19,9 +19,8 @@ public class Array2fizzBuzz
      * allocate and index into an array instead of just printing, and we vary the start/end 
      * instead of just always doing 1..100.".
      * @param start is the initial point for the array to start
-     * @param end is the final minus one point for the aaray to end
-     * @return fbArray is the array of Strings already organized as asked in the previous
-     * statement
+     * @param end is the final minus one point for the array to end
+     * @return fbArray is the array of Strings already organized as asked in the previous statement
      */
     public String[] fizzBuzz(int start, int end) {
         int length = end - start;
