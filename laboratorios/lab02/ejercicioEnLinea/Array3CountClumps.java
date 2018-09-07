@@ -11,7 +11,7 @@ public class Array3CountClumps
      * "Say that a "clump" in an array is a series of 2 or more adjacent elements of the 
      * same value. Return the number of clumps in the given array.".
      * @param nums is an array of integers
-     * @return clumps is the number of "clumps" defined in the previous statement.
+     * @return clumps is the number of "clumps" (as defined in the previous statement) found in the array.
      */
     public int countClumps(int[] nums) {
         int clumps = 0;
