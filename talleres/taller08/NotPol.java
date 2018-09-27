@@ -1,6 +1,14 @@
 import java.util.Stack;
-public class NotPol
-{
+/**
+*@autor Yhoan Alejandro Guzmán
+*@version 1.0
+*This class contains a solution for exercise 1 of taller 8 
+*/
+public class NotPol {
+    /**
+    *@param expression is the expression in polish notation to be evaluated
+    *@return value of the expression 
+    */
     public static int notPol  (String expression){
         String[] characters= expression.split(" ");
         Stack<String> stack= new Stack<String>();
@@ -52,7 +60,7 @@ public class NotPol
         }
         return value;
     }
-
+    //taken from: https://stackoverrun.com/es/q/1333241
     public static boolean isInteger(String s) {
         try { 
             Integer.parseInt(s); 
@@ -63,5 +71,10 @@ public class NotPol
         }
         return true;
     }
-
+    public static void main(String[]args){
+    String expression = "6 5 - 4 +";
+    System.out.println(expression+" = "+notPol(expression));
+    expression = "3 5 * 2 +";
+    System.out.print(expression+" = "+notPol(expression));
+    }
 }
