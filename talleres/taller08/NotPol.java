@@ -22,31 +22,31 @@ public class NotPol
                     value = nums[current];
                     current++;
                     value += nums[current];
-                    current++;
+                    nums[current] = value;
                 }
                 if(aux.equals("-")){
                     value = nums[current];
                     current++;
                     value -= nums[current];
-                    current++;
+                    nums[current] = value;
                 }
                 if(aux.equals("*")){
                     value = nums[current];
                     current++;
                     value *= nums[current];
-                    current++;
+                    nums[current] = value;
                 }
                 if(aux.equals("/")){
                     value = nums[current];
                     current++;
                     value /= nums[current];
-                    current++;
+                    nums[current] = value;
                 }
                 if(aux.equals("%")){
                     value = nums[current];
                     current++;
                     value %= nums[current];
-                    current++;
+                    nums[current] = value;
                 }
             }
         }
