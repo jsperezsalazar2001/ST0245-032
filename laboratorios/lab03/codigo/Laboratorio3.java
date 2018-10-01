@@ -15,6 +15,11 @@ public class Laboratorio3 {
     public static ArrayList<Request> requestsA = new ArrayList<>();
     public static LinkedList<Request> requestsB = new LinkedList<>();
 
+    /**
+     * This method adds a data to an ArrayList if the data is not in the list.
+     * @param list This  is the ArrayList with Integers
+     * @param data This is the value to add
+     */
     public static void smartInsertArrayList(ArrayList<Integer> list, int data){
         boolean already = false;
         for(int i =0; i<list.size(); i++){
@@ -26,6 +31,11 @@ public class Laboratorio3 {
         if(already==false) list.add(data);
     }
     
+    /**
+     * This method adds a data to a LinkedList if the data is not in the list.
+     * @param list This  is the LinkedList with Integers
+     * @param data This is the value to add
+     */
     public static void smartInsertLinkedList(LinkedList<Integer> list, int data){
         boolean already = false;
         for(int i =0; i<list.size(); i++){
@@ -37,14 +47,19 @@ public class Laboratorio3 {
         if(already==false) list.add(data);
     }
     
-    public static void assignFridgesArrayList(ArrayList<Fridge> neveras, ArrayList<Request> solicitudes){
-        for(int i=0; i<solicitudes.size(); i++){
-            Request s = solicitudes.get(i);
-            System.out.println("The store " + s.getNombTienda() + " has assigned the following refrigerators: ");
+    /**
+     * This method assigns the fridges that are in the warehouse to the received requests.
+     * @param fridges The ArrayList with fridges
+     * @param requests The ArrayList with requests
+     */
+    public static void assignFridgesArrayList(ArrayList<Fridge> fridges, ArrayList<Request> requests){
+        for(int i=0; i<requests.size(); i++){
+            Request s = requests.get(i);
+            System.out.println("The store " + s.getStoreName() + " has assigned the following refrigerators: ");
             for(int j=0; j<s.getCantN(); j++){
-                if(neveras.size()>0){
-                    System.out.println(neveras.get(0).toString());
-                    neveras.remove(0);
+                if(fridges.size()>0){
+                    System.out.println(fridges.get(0).toString());
+                    fridges.remove(0);
                 }else{
                     System.out.println("Not assigned");
                 }
@@ -53,13 +68,18 @@ public class Laboratorio3 {
         }
     }
     
-    public static void assignFridgesLinkedList(LinkedList<Fridge> neveras, LinkedList<Request> solicitudes){
-        for(int i=0; i<solicitudes.size(); i++){
-            Request s = solicitudes.get(i);
-            System.out.println("The store " + s.getNombTienda() + " has assigned the following refrigerators: ");
+    /**
+     * This method assigns the fridges that are in the warehouse to the received requests.
+     * @param fridges The LinkedList with fridges
+     * @param requests The LinkedList with requests
+     */
+    public static void assignFridgesLinkedList(LinkedList<Fridge> fridges, LinkedList<Request> requests){
+        for(int i=0; i<requests.size(); i++){
+            Request s = requests.get(i);
+            System.out.println("The store " + s.getStoreName() + " has assigned the following refrigerators: ");
             for(int j=0; j<s.getCantN(); j++){
-                if(neveras.size()>0){
-                    System.out.println(neveras.removeFirst().toString());
+                if(fridges.size()>0){
+                    System.out.println(fridges.removeFirst().toString());
                 }else{
                     System.out.println("Not assigned");
                 }
@@ -70,12 +90,11 @@ public class Laboratorio3 {
     
     
     /**
-     * 
      * This method executes the tests of the previous methods with ArrayList and LinkedList.
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        /*//Tests for the smartInsertArrayList method
+        //Tests for the smartInsertArrayList method
         
         ArrayList<Integer> listA = new ArrayList<>();
         listA.add(0); listA.add(1); listA.add(2); listA.add(3); listA.add(4); listA.add(5); listA.add(6);
@@ -90,7 +109,7 @@ public class Laboratorio3 {
         smartInsertLinkedList(listB, 6);
         System.out.println(listB.size());
         smartInsertLinkedList(listB, 7);
-        System.out.println(listB.size());*/
+        System.out.println(listB.size());
         
         //Creation of objects
         
@@ -112,12 +131,12 @@ public class Laboratorio3 {
         
         //Tests for the assignFridgesLinkedList method
         
-        /*requestsB.add(s); requestsB.add(so); requestsB.add(sol);
+        requestsB.add(s); requestsB.add(so); requestsB.add(sol);
         
         fridgesB.addFirst(n); fridgesB.addFirst(ne); fridgesB.addFirst(nev); fridgesB.addFirst(neve);
         fridgesB.addFirst(never); fridgesB.addFirst(nevera); fridgesB.addFirst(nevern);
         
-        assignFridgesLinkedList(fridgesB, requestsB);*/
+        assignFridgesLinkedList(fridgesB, requestsB);
     }
     
 }
