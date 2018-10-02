@@ -17,7 +17,7 @@ public class Laboratorio3 {
 
     /**
      * This method adds a data to an ArrayList if the data is not in the list.
-     * @param list This  is the ArrayList with Integers
+     * @param list This is the ArrayList with Integers
      * @param data This is the value to add
      */
     public static void smartInsertArrayList(ArrayList<Integer> list, int data){
@@ -33,7 +33,7 @@ public class Laboratorio3 {
     
     /**
      * This method adds a data to a LinkedList if the data is not in the list.
-     * @param list This  is the LinkedList with Integers
+     * @param list This is the LinkedList with Integers
      * @param data This is the value to add
      */
     public static void smartInsertLinkedList(LinkedList<Integer> list, int data){
@@ -88,6 +88,25 @@ public class Laboratorio3 {
         }
     }
     
+    /**
+     * This method calculates which is the most appropriate place to place a pivot with ArrayList.
+     * @param list This is the ArrayList with Integers
+     */
+    public static void betterPivotArrayList(ArrayList<Integer> list){
+        int cont =0;
+        int cont2 =0;
+        int indexB =0;
+        
+        for(int i=0; i<list.size(); i++){
+            
+        }
+    }
+    
+    /**
+     * This method calculates which is the most appropriate place to place a pivot with LinkedList.
+     * @param list This is the LinkedList with Integers
+     */
+    public static void betterPivotLinkedList(LinkedList<Integer> list){}
     
     /**
      * This method executes the tests of the previous methods with ArrayList and LinkedList.
@@ -137,6 +156,8 @@ public class Laboratorio3 {
         fridgesB.addFirst(never); fridgesB.addFirst(nevera); fridgesB.addFirst(nevern);
         
         assignFridgesLinkedList(fridgesB, requestsB);
+       
+       
     }
     
 }
