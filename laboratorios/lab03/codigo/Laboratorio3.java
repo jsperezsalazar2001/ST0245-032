@@ -38,8 +38,8 @@ public class Laboratorio3 {
      */
     public static void smartInsertLinkedList(LinkedList<Integer> list, int data){
         boolean already = false;
-        for(int i =0; i<list.size(); i++){
-            if(list.get(i)==data){
+        for(Integer i: list){
+            if(i==data){
                 already = true;
                 break;
             }
@@ -74,8 +74,7 @@ public class Laboratorio3 {
      * @param requests The LinkedList with requests
      */
     public static void assignFridgesLinkedList(LinkedList<Fridge> fridges, LinkedList<Request> requests){
-        for(int i=0; i<requests.size(); i++){
-            Request s = requests.get(i);
+        for(Request s: requests){
             System.out.println("The store " + s.getStoreName() + " has assigned the following refrigerators: ");
             for(int j=0; j<s.getCantN(); j++){
                 if(fridges.size()>0){
@@ -93,20 +92,58 @@ public class Laboratorio3 {
      * @param list This is the ArrayList with Integers
      */
     public static void betterPivotArrayList(ArrayList<Integer> list){
-        int cont =0;
-        int cont2 =0;
-        int indexB =0;
+        int sumA=0, sumB=0;
         
-        for(int i=0; i<list.size(); i++){
-            
+        for(Integer i: list){
+            sumB += i;
         }
+        
+        int indexB =-1;
+        int bestDif = sumB;
+        
+        for(Integer i: list){
+            sumB -= i;
+            sumA += i;
+            
+            int dif=Math.abs(sumB-sumA);
+            
+            if(dif<bestDif) bestDif = dif;
+            else break;
+            
+            indexB++;
+        }
+        
+        System.out.println(indexB);
     }
     
     /**
      * This method calculates which is the most appropriate place to place a pivot with LinkedList.
      * @param list This is the LinkedList with Integers
      */
-    public static void betterPivotLinkedList(LinkedList<Integer> list){}
+    public static void betterPivotLinkedList(LinkedList<Integer> list){
+        int sumA=0, sumB=0;
+        
+        for(Integer i: list){
+            sumB += i;
+        }
+        
+        int indexB =-1;
+        int bestDif = sumB;
+        
+        for(Integer i: list){
+            sumB -= i;
+            sumA += i;
+            
+            int dif=Math.abs(sumB-sumA);
+            
+            if(dif<bestDif) bestDif = dif;
+            else break;
+            
+            indexB++;
+        }
+        
+        System.out.println(indexB);
+    }
     
     /**
      * This method executes the tests of the previous methods with ArrayList and LinkedList.
@@ -156,7 +193,21 @@ public class Laboratorio3 {
         fridgesB.addFirst(never); fridgesB.addFirst(nevera); fridgesB.addFirst(nevern);
         
         assignFridgesLinkedList(fridgesB, requestsB);
-       
+      
+        
+        //Tests for the assignFridgesArrayList method
+        
+        ArrayList<Integer> listC = new ArrayList<>();
+        listC.add(10); listC.add(20); listC.add(5); listC.add(3); listC.add(20); listC.add(10);
+        
+        betterPivotArrayList(listC);
+        
+        //Tests for the assignFridgesLinkedList method
+        
+        LinkedList<Integer> listD = new LinkedList<>();
+        listD.add(10); listD.add(20); listD.add(5); listD.add(3); listD.add(20); listD.add(10);
+        
+        betterPivotLinkedList(listD);
        
     }
     
