@@ -1,11 +1,8 @@
-package laboratorio3;
-
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Stack;
 
 /**
- * 
  * This class contains the methods that simulate a robotic arm, 
  * these move stacks of blocks or unitary blocks from one column to another.
  * @author Juan Sebastián Pérez Salazar
@@ -15,7 +12,13 @@ public class RoboticArm {
     public static int n;
     public static Stack[] arrayStacks;
     public static Block[] arrayBlocks;
-    
+
+    /**
+     * This method move the block A to stack o f the block B, but, before
+     * remove the blocks on top of A and B
+     * @param a Block A
+     * @param b Block B
+     */
     public static void moveAOntoB(int a, int b){
         if(a != b){
             Block blockA = arrayBlocks[a];
@@ -53,7 +56,13 @@ public class RoboticArm {
             blockA.currentPos = blockB.currentPos;
         }
     }
-    
+
+    /**
+     * This method move the block A to stack o f the block B, but, before
+     * remove the blocks on top of B
+     * @param a Block A
+     * @param b Block B
+     */
     public static void moveAOverB(int a, int b){
         if(a != b){
             Block blockA = arrayBlocks[a];
@@ -62,6 +71,8 @@ public class RoboticArm {
 
             Stack stackA = arrayStacks[blockA.currentPos];
             Stack stackB = arrayStacks[blockB.currentPos];
+
+
 
             boolean already=false;
             for (Iterator it = stackA.iterator(); it.hasNext();) {
@@ -79,7 +90,13 @@ public class RoboticArm {
             blockA.currentPos = blockB.currentPos;
         }
     }
-    
+
+    /**
+     * This method move the block A to stack of the block B without
+     * remove the blocks on top of A.
+     * @param a Block A
+     * @param b Block B
+     */
     public static void pileAOntoB(int a, int b){
         if(a != b){
             Block blockA = arrayBlocks[a];
@@ -113,7 +130,13 @@ public class RoboticArm {
             }
         }
     }
-    
+
+    /**
+     * This method move the block A to stack of the block B without
+     * remove the blocks on top of A and B
+     * @param a Block A
+     * @param b Block B
+     */
     public static void pileAOverB(int a, int b){
         if(a != b){
             Block blockA = arrayBlocks[a];

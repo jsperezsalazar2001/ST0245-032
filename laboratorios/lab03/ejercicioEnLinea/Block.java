@@ -1,5 +1,3 @@
-package laboratorio3;
-
 /**
  * This class contains the attributes of the Block object.
  * @author cl18307
