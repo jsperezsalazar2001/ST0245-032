@@ -30,7 +30,5 @@ public class Request {
      */
     public int getCantN() {
         return cantN;
-    }
-    
-    
+    } 
 }
