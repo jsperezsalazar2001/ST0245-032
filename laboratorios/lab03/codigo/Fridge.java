@@ -39,6 +39,6 @@ public class Fridge {
     @Override
     public String toString(){
         return "Cod: " + cod + "\n" + 
-               "Descripción: " + desc;
+               "Descripción: " +desc;
     }
 }
