@@ -57,6 +57,7 @@ public class Bank {
      * @param args the command line arguments
      */
     public static void main(String[] args){
+        
         LinkedList<String> clients1=new LinkedList<>(); LinkedList<String> clients2=new LinkedList<>(); 
         LinkedList<String> clients3=new LinkedList<>(); LinkedList<String> clients4=new LinkedList<>();
         
