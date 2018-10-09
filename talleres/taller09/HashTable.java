@@ -1,24 +1,4 @@
-/**
- * This class is an implementation of the Hash Table concept
- * @author Yhoan Alejandro Guzmán
- * @version 1
- */
-import javafx.util.Pair;
-import java.util.*;
-public class OurHashTable
-{
-    
-    private ArrayList<LinkedList<Pair<String,Integer>>> table;
-    
-    /**
-     * This mehtod defines the array with the given size.
-     * @param size is the initial size wanted for the array.
-     */
-    public OurHashTable(int size){
-        this.table = new ArrayList(size);
-    }
-
-   /**
+ /**
  * This class is an implementation of the Hash Table concept
  * @author Yhoan Alejandro Guzmán
  * @version 1
