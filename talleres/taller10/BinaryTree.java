@@ -12,7 +12,6 @@ public class BinaryTree {
     public class Node {
         public Node left;
         public Node right;
-        public Node father;
         public int data;
         public Node(int d){
             data = d;
@@ -44,14 +43,12 @@ public class BinaryTree {
         if(n > node.data){
             if(node.right == null){
                 node.right = new Node(n);
-                node.right.father = node;
             }else{
                 insertarAux(node.right, n);
             }
         }else if(n < node.data){
             if(node.left == null){
                 node.left = new Node(n);
-                node.left.father = node;
             }else{
                 insertarAux(node.left, n);
             }
@@ -95,7 +92,25 @@ public class BinaryTree {
      * 
      */
     public void borrar(int n) {
-        borrarAux(root, n);
+        Node father = borrarAux(root, n);
+        Node tLeft;
+        Node tRight;
+        if(father != null){
+            if(father.right != null){
+                if(father.right.data == n){
+                    tLeft = father.rigth.left;
+                    tRight = father.right.right;
+                    father.right = tRight;
+                    father.right.left = tLeft;
+                }     
+            }else if(father.left =! null)
+                if(father.left.data == n){
+                    tLeft = father.left.left;
+                    tRight = father.left.right;
+                    father.left = tRight;
+                    father.left.left = tLeft;
+                }
+        }
     }
 
     /**
@@ -105,16 +120,19 @@ public class BinaryTree {
      * borra un dato respetando claro las desigualdades en el árbol
      */ 
     private Node borrarAux(Node node, int n) {
-        if(node.data == n){
-            
-        }
         if(node == null){
-            
+            return null;
         }
+        if(node.right != null){
+            if(node.right.data == n)
+                return node; 
+        }else if(node.left =! null)
+            if(node.left.data == n)
+                return node; 
         if(n > node.data ){
-            return buscarAux(node.right, n);
+            return borrarAux(node.right, n);
         }else{
-            return buscarAux(node.left, n);
+            return borrarAux(node.left, n);
         }
     }
     /*
