@@ -36,6 +36,9 @@ public class HashTable
      */
     public HashTable(int size){
         this.table = new ArrayList(size);
+        for(int i = 0;i < size; i++){
+        table.add(new LinkedList());
+        }
     }
 
     /**
