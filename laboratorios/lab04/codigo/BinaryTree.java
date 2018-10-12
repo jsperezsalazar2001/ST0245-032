@@ -1,4 +1,4 @@
-package Lab04;
+package lab04;
 
 /**
  * This class contains points 1.1 and 1.2 of the laboratory 4, a genealogical
@@ -9,7 +9,6 @@ package Lab04;
 public class BinaryTree {
 
     public Node root;
-    public Node person;
 
     /**
      * Constructor of the class
@@ -39,20 +38,26 @@ public class BinaryTree {
         recursivePrintAUX(root);
     }
 
-    public void findingNode(Node node, String name) {
-        if(node != null){
-            if (node.data.equals(name)) {
-                person = node;
+    public Node findingNode(Node node, String name) {
+        if(node == null)
+            return null;
+        else{
+            if(node.data.equals(name)) {
+                return node;
             }
-
-            findingNode(node.left, name);
-            findingNode(node.right, name);
+            Node left = findingNode(node.left, name);
+            if(left != null)
+                return left;
+            Node right = findingNode(node.right, name);
+            if(right != null)
+                return right;
+            return null;
         }    
     }
 
     public String getGrandMothersName(String name) {
-        findingNode(root, name);
-        
+        Node person = findingNode(root, name);
+        System.out.println(person.data);
         if (person != null) {
             person = person.left;
             if (person != null) {
@@ -86,6 +91,6 @@ public class BinaryTree {
 
         bt.recursivePrint();
 
-        System.out.println(bt.getGrandMothersName("Lilian"));
+        System.out.println(bt.getGrandMothersName("Carlos"));
     }
 }
