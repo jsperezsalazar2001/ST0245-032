@@ -1,4 +1,4 @@
-package lab04;
+package Lab04;
 
 /**
  * This class contains the Node object, which is used to store the values of the tree.
