@@ -19,43 +19,6 @@ public class BinaryTree {
     }
 
     /**
-     * Calculates the max between two values.
-     *
-     * @param i value i
-     * @param j value j
-     * @return the max
-     */
-    private int max2(int i, int j) {
-        if (i > j) {
-            return i;
-        }
-        return j;
-    }
-
-    /**
-     * Find the max height.
-     *
-     * @param node root
-     * @return the max height
-     */
-    private int maxheightAUX(Node node) {
-        if (node == null) {
-            return 0;
-        } else {
-            return max2(maxheightAUX(node.left), maxheightAUX(node.right)) + 1;
-        }
-    }
-
-    /**
-     * Auxiliar of the previous method.
-     *
-     * @return the max height
-     */
-    public int maxheight() {
-        return maxheightAUX(root);
-    }
-
-    /**
      * Print the tree in pre-order
      *
      * @param node the root
