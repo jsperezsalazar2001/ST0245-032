@@ -90,7 +90,7 @@ public class BinaryTree {
     public String getGrandMothersName(String name) {
         findingNode(root, name);
         
-        if (!person.data.equals("")) {
+        if (person != null) {
             person = person.left;
             if (person != null) {
                 person = person.left;
