@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.PrintWriter;
 import java.io.IOException;
 import java.util.LinkedList;
+import java.util.Scanner;
 
 /**
  * Implementation of an algorithm to prevent collisions Data structure used: 3D
@@ -213,10 +214,15 @@ public class CollisionPrevention3D {
             }
         }
     }
-
     
+    /**
+     * Main method to execute the algorithm
+     * @param args 
+     */
     public static void main(String[] args) {
-        int numberOfBees = 100000;
+        System.out.println("Digite el numero de abejas");
+        Scanner scan = new Scanner(System.in);
+        int numberOfBees = scan.nextInt();
         long mb = 1024 * 1024;
         Runtime runtime = Runtime.getRuntime();
         if (numberOfBees > 5000) {
